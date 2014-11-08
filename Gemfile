@@ -33,7 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'mongoid'
-gem 'devise'
+gem 'devise', github: 'plataformatec/devise', branch: 'lm-rails-4-2'
 gem 'docsplit'
 gem 'sidekiq'
 gem 'sidetiq'
