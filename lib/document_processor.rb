@@ -10,7 +10,7 @@ class DocumentProcessor
   end
 
   def split_doc
-    Docsplit.extract_images(document, size: '1000x', format: [:png, :jpg], output: OUTPUT_PATH)
+    Docsplit.extract_images(document, size: '1000x', format: [:png, :jpg], output: "#{OUTPUT_PATH}/#{user.id}")
   end
 
   # returns either user object or just info hash
