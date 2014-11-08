@@ -4,7 +4,7 @@ class Document
   ## Attributes
   field :title,             type: String
   field :location,          type: String, default: DocumentProcessor::OUTPUT_PATH
-  field :customize_time,    type: Time, default: nil
+  field :customized_time,    type: Time, default: nil
   field :completed_reading, type: Boolean, default: false
 
   ## Association

@@ -2,16 +2,16 @@ class DocumentProcessor
   attr_accessor :document, :user
 
   OUTPUT_PATH = 'public/processed_documents'
+  DEFAULT_PDF = 'public/documents/Goamjuly2008.pdf'
 
-
-  def initialize(document, user_hash)
+  def initialize(user_hash:, document: DEFAULT_PDF)
     @document = document
     @user = get_user(user_hash)
   end
 
   def split_doc
     extra_options = { size: '1000x',
-                      format: [:png, :jpg],
+                      format: [:png],
                       output: "#{OUTPUT_PATH}/#{user.id}/#{get_file_name}" }
     Docsplit.extract_images(document, extra_options)
   end
