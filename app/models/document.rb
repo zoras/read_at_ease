@@ -1,3 +1,5 @@
+require_relative '../uploaders/ebook_uploader'
+
 class Document
   include Mongoid::Document
 
@@ -8,9 +10,13 @@ class Document
   field :completed_reading, type: Boolean, default: false
   field :snippets,          type: Array, default: []
   field :track_head,        type: Integer, default: 0 #upcoming snippet
+  field :ebook, 			type: String
 
   ## Association
   belongs_to :user
+
+  ## Uploads
+  mount_uploader :ebook, EbookUploader
 
   def next_snippet_to_read
     if track_head < snippets.count
@@ -25,5 +31,4 @@ class Document
     self.track_head += 1
     self.save
   end
-
 end
