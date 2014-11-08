@@ -18,3 +18,5 @@
 public/processed_documents
 # Ignore bin
 /bin/*
+
+public/uploads
