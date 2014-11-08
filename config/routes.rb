@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get '/about' => 'home#about'
   get '/upload' => 'documents#upload'
+  post '/try_now' => 'home#try_now'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

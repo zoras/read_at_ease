@@ -71,6 +71,11 @@
                         <h1>Reading Redefined</h1>
                         <h3>Automate your reading habits</h3>
                         <hr class="intro-divider">
+                        <%= form_tag("/try_now", method: "post", class: 'try_form') do %>
+                          <%= text_field_tag 'email', "", autocomplete: "off", placeholder:"youremail@server.com", class:"email" %>
+                          <%= submit_tag 'Try it Now!', class: "submit" %>
+                        <% end %>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -158,7 +163,7 @@
                     <h2>Connect to Read @ Ease</h2>
                 </div>
                 <div class="col-lg-6">
-                
+
                 </div>
             </div>
 
@@ -197,5 +202,9 @@
     </footer>
 
 </body>
-
+<style>
+  .try_form {
+    color: #000000;
+  }
+</style>
 </html>

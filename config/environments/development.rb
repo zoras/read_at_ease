@@ -48,7 +48,7 @@ Rails.application.configure do
     port:                 587,
     # domain:               'read-at-ease.com',
     user_name:            'read.at.ease.service@gmail.com',
-    password:             "#{Rails.application.secrets.mail_password}",
+    password:             "kathmandu09",
     authentication:       'plain',
     enable_starttls_auto: true  }
   config.action_mailer.perform_deliveries = true

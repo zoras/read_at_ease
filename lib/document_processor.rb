@@ -17,7 +17,7 @@ class DocumentProcessor
     if Docsplit.extract_images(source_document, extra_options)
       title = Docsplit.extract_title(source_document)
       split_snippets = Dir["#{snippets_path}/*.*"].sort
-      Document.create(title: title, snippets: split_snippets)
+      @user.documents.create(title: title, snippets: split_snippets)
     end
   end
 
