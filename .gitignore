@@ -16,3 +16,5 @@
 /tmp
 
 public/processed_documents
+# Ignore bin
+/bin/*
