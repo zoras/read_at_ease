@@ -26,6 +26,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'gravatar_image_tag'
 
+gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
+gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
+gem 'mini_magick'
+
+gem 'simple_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

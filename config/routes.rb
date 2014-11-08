@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'documents/upload'
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get '/about' => 'home#about'
+  get '/upload' => 'documents#upload'
   post '/try_now' => 'home#try_now'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -16,7 +19,7 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-
+  resources :documents
 
   # Example resource route with options:
   #   resources :products do
