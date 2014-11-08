@@ -9,7 +9,6 @@ class UserMailer < ActionMailer::Base
 
   # user = User.first
   # snippet_path = "#{Rails.root}/public/processed_documents/545db6196b73683ec6000000/factory_girl_tutorial/factory_girl_tutorial_1.jpg"
-
   # mail = UserMailer.mail_snippet(user, snippet_path).deliver!
   def mail_snippet(user, snippet_path)
     @user = user
