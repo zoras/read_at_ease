@@ -72,7 +72,7 @@
                         <h3>Automate your reading habits</h3>
                         <hr class="intro-divider">
                         <%= form_tag("/try_now", method: "post", class: 'try_form') do %>
-                          <%= text_field_tag 'email', "", autocomplete: "off", placeholder:"youremail@server.com", class:"email" %>
+                          <%= text_field_tag 'email', "", autocomplete: "off", placeholder:"youremail@server.com", class:"email", required: true %>
                           <%= submit_tag 'Try it Now!', class: "submit" %>
                         <% end %>
                         </form>
