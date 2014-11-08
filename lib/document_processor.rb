@@ -12,8 +12,12 @@ class DocumentProcessor
   def split_doc
     extra_options = { size: '1000x',
                       format: [:png, :jpg],
-                      output: "#{OUTPUT_PATH}/#{user.id}" }
+                      output: "#{OUTPUT_PATH}/#{user.id}/#{get_file_name}" }
     Docsplit.extract_images(document, extra_options)
+  end
+
+  def get_file_name
+    File.basename(document, '.*')
   end
 
   # returns either user object or just info hash
